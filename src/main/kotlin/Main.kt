@@ -2,13 +2,11 @@ import java.util.*
 
 fun main() {
     println("Введите колиство лайков")
-    val scan = Scanner(System.`in`)
-    val input = scan.nextInt()
-    val likes = input % 10
-    if (likes == 1) {
-        println("Понравилось $input человеку")
-    } else {
-        println("Понравилось $input людям")
+    val likes = readln().toInt()
+    if (likes % 100 == 11 || likes % 10 in 2..9) {
+        println("Понравилось $likes людям")
+    } else if (likes % 10 == 1) {
+        println("Понравилось $likes человеку")
     }
 }
 
